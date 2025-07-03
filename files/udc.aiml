@@ -304,7 +304,7 @@
 		<category>
 			<pattern>TRY AGAIN</pattern>
 			<template>
-			Do you want to try again>
+			Do you want to try again?
 				<button>
 					<text>Yes</text>
 					<postback>hello</postback>
