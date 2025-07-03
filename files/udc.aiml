@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+	<category>
+		<pattern>HELLO</pattern>
+		<template>
+		Hello! I am the WGU Career Advisor Bot for the Computer Science Department.
+			<button>
+				<text>Tell me about careers</text>
+				<postback>tell me careers</postback>
+			</button>
+			<button>
+				<text>Help me decide</text>
+				<postback>help me decide</postback>
+			</button>
+		</template>
+	</category>
+	<category>
+		<pattern>TELL ME CAREERS</pattern>
+		<template>
+		<think><set name = "topic">careers</set></think>
+		These are 5 of the most common careers you can get with a Computer Science degree. Click one to learn more. 
+			<button>
+				<text>Software Developer</text>
+				<postback>software developer</postback>
+			</button>
+			
+			<button>
+				<text>Web Developer</text>
+				<postback>web developer</postback>
+			</button>
+			<button>
+				<text>Cybersecurity</text>
+				<postback>cybersecurity</postback>
+			</button>
+			<button>
+				<text>Data Scientist</text>
+				<postback>data scientist</postback>
+			</button>
+			<button>
+				<text>Systems Analysis</text>
+				<postback>systems analysis</postback>
+			</button>
+			<button>
+				<text>Help Me Decide</text>
+				<postback>help me decide</postback>
+			</button>
+		</template>
+	</category>
+	<category>
+		<pattern>HELP ME DECIDE</pattern>
+		<template>
+		<think><set name = "topic">decisions</set></think>
+		Ready to answer some questions to see if we can help figure out which career might be best for you?
+			<button>
+				<text>Let's go!</text>
+				<postback>web one</postback>
+			</button>
+		</template>
+	</category>
+	<topic name = "careers">
+		<category>
+			<pattern>SOFTWARE DEVELOPER</pattern>
+			<template>
+			Software development heavily involves coding. It is also very important to work well on a team and collaborate with others. If you are comfortable coding, debugging, and enjoy problem solving then this could be a good career path for you.
+				<button>
+					<text>Take me Back</text>
+					<postback>tell me careers</postback>
+				</button>
+			</template>
+		</category>
+		<category>
+			<pattern>WEB DEVELOPER</pattern>
+			<template>
+			Web development involes some coding and design. The goal is to ensure the websites and applications are function, user-friendly, and visiually appealing. If you like some coding and the creative freedoms to design, then web development could be a good career path for you.
+				<button>
+					<text>Take me Back</text>
+					<postback>tell me careers</postback>
+				</button>
+			</template>
+		</category>
+		<category>
+			<pattern>CYBERSECURITY</pattern>
+			<template>
+			Cybersecurity needs people who excell at problem solving. Be prepared to continue your education daily, as there is never a time new threats are not arrising. If you are adaptable and a critical problem solver, cybersecurity could be a good career path for you.
+				<button>
+					<text>Take me Back</text>
+					<postback>tell me careers</postback>
+				</button>
+			</template>
+		</category>
+		<category>
+			<pattern>DATA SCIENTIST</pattern>
+			<template>
+			Data scientists get throughly involved with the data. Data scientist will develop and implement machine learning algorithms, create data visualizations, and communicate findings to stakeholders. If you find that lean more towards critical thinking and business projections, then data science could be a good career path for you.
+				<button>
+					<text>Take me Back</text>
+					<postback>tell me careers</postback>
+				</button>
+			</template>
+		</category>
+		<category>
+			<pattern>SYSTEMS ANALYSIS</pattern>
+			<template>
+				System analysis careers involve examining systems to identify areas for improvement, inefficiencies, and potential isses. They work alongside steakholders to ensure that they are informed on what is occuring. If you tend to be well rounded in critical thinking and analysis, problem-solving, design, and have strong communication skills then system analysis could be a good career path for you.
+				<button>
+					<text>Take me Back</text>
+					<postback>tell me careers</postback>
+				</button>
+			</template>
+		</category>
+	</topic>
+	<topic name = "decisions">
+		<category>
+			<pattern>WEB ONE</pattern>
+			<template>
+			Do you prefer projects that can be completed quickly?
+				<button>
+					<text>Yes</text>
+					<postback>web two</postback>
+				</button>
+				<button>
+					<text>No</text>
+					<postback>software one</postback>
+				</button>
+			</template>
+		</category>
+		<category>
+			<pattern>SOFTWARE ONE</pattern>
+			<template>
+			Do you prefer to start project builds from scratch?
+				<button>
+					<text>Yes</text>
+					<postback>software two</postback>
+				</button>
+				<button>
+					<text>No</text>
+					<postback>data one</postback>
+				</button>
+			</template>
+		</category>
+		
+		<category>
+			<pattern>SYSTEMS ONE</pattern>
+			<template>
+			Do you prefer to spend your time in meetings and working closely with stakeholders?
+				<button>
+					<text>Yes</text>
+					<postback>system two</postback>
+				</button>
+				<button>
+					<text>No</text>
+					<postback>software two</postback>
+				</button>
+			</template>
+		</category>
+		<category>
+			<pattern>DATA ONE</pattern>
+			<template>
+			Do you prefer to spend your time analysing data?
+				<button>
+					<text>Yes</text>
+					<postback>data two</postback>
+				</button>
+				<button>
+					<text>No</text>
+					<postback>cybersecurity one</postback>
+				</button>
+			</template>
+		</category>
+		<category>
+			<pattern>CYBERSECURITY ONE</pattern>
+			<template>
+			Do you prefer to spend your time in Security and Network?
+				<button>
+					<text>Yes</text>
+					<postback>cybersecurity two</postback>
+				</button>
+				<button>
+					<text>No</text>
+					<postback>try again</postback>
+				</button>
+			</template>
+		</category>
+		<category>
+			<pattern>WEB TWO</pattern>
+			<template>
+			Do you enjoy designing interfaces?
+				<button>
+					<text>Yes</text>
+					<postback>web answer</postback>
+				</button>
+				<button>
+					<text>No</text>
+					<postback>data two</postback>
+				</button>
+			</template>
+		</category>		
+		<category>
+			<pattern>SOFTWARE TWO</pattern>
+			<template>
+			Do you enjoy debugging?
+				<button>
+					<text>Yes</text>
+					<postback>software answer</postback>
+				</button>
+				<button>
+					<text>No</text>
+					<postback>try again</postback>
+				</button>
+			</template>
+		</category>
+		<category>
+			<pattern>SYSTEM TWO</pattern>
+			<template>
+			Do you prefer to spend your time improving systems?
+				<button>
+					<text>Yes</text>
+					<postback>system answer</postback>
+				</button>
+				<button>
+					<text>No</text>
+					<postback>data one</postback>
+				</button>
+			</template>
+		</category>
+		<category>
+			<pattern>DATA TWO</pattern>
+			<template>
+			Do you prefer working in ambiguity?
+				<button>
+					<text>Yes</text>
+					<postback>data answer</postback>
+				</button>
+				<button>
+					<text>No</text>
+					<postback>cybersecurity two</postback>
+				</button>
+			</template>
+		</category>
+		<category>
+			<pattern>CYBERSECURITY TWO</pattern>
+			<template>
+			Do you prefer real time problem solving?
+				<button>
+					<text>Yes</text>
+					<postback>cybersecurity answer</postback>
+				</button>
+				<button>
+					<text>No</text>
+					<postback>software two</postback>
+				</button>
+			</template>
+		</category>		
+		<category>
+			<pattern>SOFTWARE ANSWER</pattern>
+			<template>
+			You may be the best fit as a software developer.
+				<button>
+					<text>Try again?</text>
+					<postback>help me decide</postback>
+				</button>
+			</template>
+		</category>
+		<category>
+			<pattern>WEB ANSWER</pattern>
+			<template>
+			You may be the best fit as a web developer.
+				<button>
+					<text>Try again?</text>
+					<postback>help me decide</postback>
+				</button>
+			</template>
+		</category>
+		<category>
+			<pattern>CYBERSECURITY ANSWER</pattern>
+			<template>
+			You may be the best fit as a Cybersecurity Specialist.
+				<button>
+					<text>Try again?</text>
+					<postback>help me decide</postback>
+				</button>
+			</template>
+		</category>
+		<category>
+			<pattern>DATA ANSWER</pattern>
+			<template>
+			You may be the best fit as a Data Scientist.
+				<button>
+					<text>Try again?</text>
+					<postback>help me decide</postback>
+				</button>
+			</template>
+		</category>
+		<category>
+			<pattern>SYSTEMS ANSWER</pattern>
+			<template>
+			You may be the best fit as a Systems Analysis.
+				<button>
+					<text>Try again?</text>
+					<postback>help me decide</postback>
+				</button>
+			</template>
+		</category>
+		<category>
+			<pattern>TRY AGAIN</pattern>
+			<template>
+			Do you want to try again>
+				<button>
+					<text>Yes</text>
+					<postback>hello</postback>
+				</button>
+			</template>
+		</category>
+	</topic>
+</aiml>
